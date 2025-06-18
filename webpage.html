@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NGO Web App - Inspired by Session</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="webpage.css" /> 
+<script src="webpage.js" defer></script>
+<style>
+  /* Reset & base */
+  
+</style>
+</head>
+<body data-theme="light">
+<div id="app" role="application">
+  <header id="app-header" role="banner" aria-label="Primary application header">
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="app-sidebar" id="navToggleBtn">
+      <span class="material-icons">menu</span>
+    </button>
+    <div class="logo" tabindex="0">NGO Connect</div>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+      <a href="#home" class="active" data-page="home" tabindex="0">Home</a>
+      <a href="#community" data-page="community" tabindex="0">Community Development</a>
+      <a href="#civic" data-page="civic" tabindex="0">Civic Education</a>
+      <a href="#partners" data-page="partners" tabindex="0">Partners</a>
+      <a href="#contact" data-page="contact" tabindex="0">Contacts / Contribute</a>
+    </nav>
+  </header>
+
+  <aside id="app-sidebar" role="complementary" aria-label="Sidebar navigation">
+    <nav class="sidebar-nav" role="navigation" aria-label="Sidebar navigation">
+      <a href="#home" class="active" data-page="home" tabindex="0" aria-current="page">
+        <span class="material-icons sidebar-icon" aria-hidden="true">home</span> Home
+      </a>
+      <a href="#community" data-page="community" tabindex="0">
+        <span class="material-icons sidebar-icon" aria-hidden="true">group</span> Community Development
+        <span class="notification-badge" aria-label="5 new updates">5</span>
+      </a>
+      <a href="#civic" data-page="civic" tabindex="0">
+        <span class="material-icons sidebar-icon" aria-hidden="true">school</span> Civic Education
+      </a>
+      <a href="#partners" data-page="partners" tabindex="0">
+        <span class="material-icons sidebar-icon" aria-hidden="true">handshake</span> Partners
+      </a>
+      <a href="#contact" data-page="contact" tabindex="0">
+        <span class="material-icons sidebar-icon" aria-hidden="true">contact_mail</span> Contacts / Contribute
+      </a>
+    </nav>
+  </aside>
+
+  <main id="app-main" tabindex="0" aria-live="polite" aria-atomic="true">
+    <!-- Dynamic content loaded here -->
+  </main>
+
+  <footer id="app-footer" role="contentinfo">
+    <div>© 2024 NGO Connect. All rights reserved.</div>
+    <div class="footer-socials" aria-label="Social media links">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" tabindex="0">
+        <span class="material-icons">facebook</span>
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" tabindex="0">
+        <span class="material-icons">twitter</span>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" tabindex="0">
+        <span class="material-icons">linkedin</span>
+      </a>
+    </div>
+  </footer>
+</div>
+
+<div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+<script>
+
+</script>
+</body>
+</html>
+
