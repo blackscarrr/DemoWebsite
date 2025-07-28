@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insurance Consultation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="logic.js"></script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .typing-indicator::after {
+            content: '...';
+            animation: pulse 1.5s infinite;
+        }
+        .message-animation {
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="chat-section" class="max-w-4xl mx-auto mb-16">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-blue-700 px-6 py-4 text-white">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-semibold">Insurance Consultation Bot</h2>
+                        <div class="flex space-x-2">
+                            <span class="h-3 w-3 rounded-full bg-green-400"></span>
+                            <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+                            <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="chat-container" class="h-96 p-4 overflow-y-auto bg-gray-50">
+                    <div class="message-animation mb-4 flex">
+                        <div class="bg-blue-100 rounded-r-xl rounded-bl-xl px-4 py-3 max-w-xs">
+                            <p>Hello! I'm InsuraAssist, your AI insurance consultant. I can help with:</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>Policy information</li>
+                                <li>Claims assistance</li>
+                                <li>Coverage options</li>
+                                <li>Premium estimates</li>
+                            </ul>
+                            <p class="mt-2">How can I help you today?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-200 p-4 bg-white">
+                    <form id="chat-form" class="flex">
+                        <input type="text" id="user-input" placeholder="Type your insurance question here..." 
+                            class="flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg transition">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Robin Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
+
